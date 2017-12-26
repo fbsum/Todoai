@@ -2,7 +2,7 @@
 
 [![](https://jitpack.io/v/fbsum/Todoai.svg)](https://jitpack.io/#fbsum/Todoai)
 
-## Usage
+## Dependency
 Step 1. Add the JitPack repository to your build file
 ```groovy
 	allprojects {
@@ -14,6 +14,9 @@ Step 1. Add the JitPack repository to your build file
 Step 2. Add the dependency
 ```groovy
         dependencies {
-	      compile 'com.github.fbsum:Todoai:0.0.1'
+	      compile 'com.github.fbsum:Todoai:x.y.z'
 	}
 ```
+
+## Thanks
+https://github.com/jonfinerty/Once
