@@ -29,6 +29,7 @@ class PersistTodo extends Todoai {
         if (timestamps == null) {
             String string = Preferences.getString(tag, "");
             timestamps = stringToLongList(string);
+            persistMap.put(tag, timestamps);
         }
         return timestamps;
     }

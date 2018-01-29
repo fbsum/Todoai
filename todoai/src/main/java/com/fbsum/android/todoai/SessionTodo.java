@@ -17,6 +17,7 @@ class SessionTodo extends Todoai {
         List<Long> timestamps = sessionMap.get(tag);
         if (timestamps == null) {
             timestamps = new ArrayList<>(1);
+            sessionMap.put(tag, timestamps);
         }
         return timestamps;
     }
