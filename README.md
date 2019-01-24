@@ -22,35 +22,25 @@ Step 2. Add the dependency
 
 ## Usage
 ```java
-        String tag = "SHOW_TAG";
-        result = Todoai.persist().isDone(tag);
-        result = Todoai.persist().today().isDone(tag);
-        result = Todoai.persist().newVersion(context).isDone(tag);
-        result = Todoai.persist().afterInstall(context).isDone(tag);
-        result = Todoai.persist().between(startTime, endTime).isDone(tag);
-        ...
+        result = Todoai.getInstance().isDone(tag);
+        result = Todoai.getInstance().today().isDone(tag);
+        result = Todoai.getInstance().newVersion(context).isDone(tag);
+        result = Todoai.getInstance().afterInstall(context).isDone(tag);
+        result = Todoai.getInstance().timestampBetween(startTime, endTime).isDone(tag);
+        // ...
+        result = Todoai.getInstance().countExactly(5).isDone(tag);
+        result = Todoai.getInstance().countMoreThan(5).isDone(tag);
+        result = Todoai.getInstance().countLessThan(5).isDone(tag);
+        result = Todoai.getInstance().countBetween(1, 5).isDone(tag);
+        result = Todoai.getInstance().today().countMoreThan(5).isDone(tag);
+        result = Todoai.getInstance().newVersion(context).countExactly(5).isDone(tag);
+        result = Todoai.getInstance().timestampBetween(startTime, endTime).countLessThan(5).isDone(tag);
+        // ...
 
-        result = Todoai.persist().moreThan(5).check(tag);
-        result = Todoai.persist().exactly(5).check(tag);
-        result = Todoai.persist().lessThan(5).check(tag);
-        result = Todoai.persist().today().moreThan(5).check(tag);
-        result = Todoai.persist().newVersion(context).exactly(5).check(tag);
-        result = Todoai.persist().between(startTime, endTime).lessThan(5).check(tag);
-        ...
+        result = Todoai.getInstance().autoDone().isDone(tag);
+        // ...
 
-        result = Todoai.session().isDone(tag);
-        result = Todoai.session().today().isDone(tag);
-        result = Todoai.session().between(startTime, endTime).isDone(tag);
-        ...
-
-        result = Todoai.session().moreThan(5).check(tag);
-        result = Todoai.session().exactly(5).check(tag);
-        result = Todoai.session().lessThan(5).check(tag);
-        result = Todoai.session().between(startTime, endTime).lessThan(5).check(tag);
-        ...
-
-        Todoai.persist().makeDone(tag);
-        Todoai.session().makeDone(tag);
+        Todoai.getInstance().makeDone(tag);
 ```
 
 ## Thanks
